@@ -21,6 +21,11 @@ public class Palindrome {
      * <p>Результат: true</p>
      */
     public boolean isPalindrome(String text) {
-        return false;
+        String formattedText = text
+                .replaceAll("\\pP", "")
+                .replaceAll("\\s+","")
+                .toLowerCase();
+        StringBuilder sb = new StringBuilder(formattedText);
+        return formattedText.equals(sb.reverse().toString());
     }
 }
