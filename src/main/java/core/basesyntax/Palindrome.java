@@ -22,8 +22,7 @@ public class Palindrome {
      */
     public boolean isPalindrome(String text) {
         String formattedText = text
-                .replaceAll("\\pP", "")
-                .replaceAll("\\s+","")
+                .replaceAll("[^a-zA-Z0-9]", "")
                 .toLowerCase();
         StringBuilder sb = new StringBuilder(formattedText);
         return formattedText.equals(sb.reverse().toString());
