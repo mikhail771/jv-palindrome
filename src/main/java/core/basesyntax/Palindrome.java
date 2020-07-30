@@ -24,7 +24,7 @@ public class Palindrome {
         String formattedText = text
                 .replaceAll("[^a-zA-Z0-9]", "")
                 .toLowerCase();
-        StringBuilder sb = new StringBuilder(formattedText);
-        return formattedText.equals(sb.reverse().toString());
+        StringBuilder reversedText = new StringBuilder(formattedText).reverse();
+        return formattedText.equals(reversedText.toString());
     }
 }
